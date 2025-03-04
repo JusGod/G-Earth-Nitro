@@ -22,9 +22,10 @@ public class NitroHttpProxyIntercept extends HttpProxyInterceptInitializer {
 
     private static final Logger log = LoggerFactory.getLogger(NitroHttpProxyIntercept.class);
 
-    private static final String NitroConfigSearch = "anubis.websocket.url";
-    private static final String NitroClientSearch = "anubis.configuration.urls";
+    private static final String NitroConfigSearch = "socket.url";
+    private static final String NitroClientSearch = "config.urls";
     private static final Pattern NitroConfigPattern = Pattern.compile("[\"']socket\\.url[\"']:(\\s+)?[\"'](wss://websocket\\.habbo\\.network:6969/)[\"']", Pattern.MULTILINE);
+
 
     // https://developers.cloudflare.com/fundamentals/get-started/reference/cloudflare-cookies/
     private static final HashSet<String> CloudflareCookies = new HashSet<>(Arrays.asList(
